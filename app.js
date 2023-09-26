@@ -5,6 +5,7 @@ require('express-async-errors')
 const app = express()
 const connectDB=require('./db/conexion')
 const productsRouter=require('./routes/products')
+const Products = require('./models/product')
 
 const unPuerto= process.env.PUERTO
 

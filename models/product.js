@@ -22,6 +22,11 @@ const productsSchema= new mongoose.Schema({
     },
     company:{
         type:String,
-        enum:['ikea','liddy','soniac','easy']
+        enum:{
+            enum:['ikea','liddy','soniac','easy'],
+            message:'{value} no tiene stock'
+        }
     }
 })    
+
+module.exports=mongoose.model('product',productsSchema)
