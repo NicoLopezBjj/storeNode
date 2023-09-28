@@ -23,7 +23,7 @@ const productsSchema= new mongoose.Schema({
     company:{
         type:String,
         enum:{
-            enum:['ikea','liddy','soniac','easy'],
+            values:['ikea','liddy','soniac','easy'],
             message:'{value} no tiene stock'
         }
     }
