@@ -18,8 +18,14 @@ const conexion = async () =>{
     }
 }
 
+app.set('view engine','ejs')
+
+const usuario={
+    nombre:Nico,
+    apellido: Lopez
+}
 app.get('/', (req,res)=>{
-    res.send('hola mundo')
+    res.render('home',{usuario:usuario})
 })
 
 app.use('/shop',productsRouter)
