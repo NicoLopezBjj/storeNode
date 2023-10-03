@@ -11,8 +11,10 @@ const iniciar= async () =>{
         await connectDB(process.env.MONGO_URL)
         await Product.deleteMany()
         await Product.create(jsonProduct)
-        console.log('SE CONECTO')
+        console.log('cambios realizados')
     }catch(error){
         console.log(error)
     }
 }
+
+iniciar()

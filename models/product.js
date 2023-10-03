@@ -26,6 +26,9 @@ const productsSchema= new mongoose.Schema({
             values:['ikea','liddy','soniac','easy'],
             message:'{value} no tiene stock'
         }
+    },
+    img:{
+        type:String
     }
 })    
 
