@@ -14,7 +14,12 @@ const getAllProductStatic= async (req,res)=>{
 // ejemplo estatico 
 }
 
+const getAllIkea= async (req,res)=>{
+    const products = await Product.find({company:'ikea'})
+    res.render('ikea',{products:products})
+}
 module.exports={
     getAllProduct,
-    getAllProductStatic
+    getAllProductStatic,
+    getAllIkea
 }
