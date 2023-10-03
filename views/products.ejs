@@ -1,0 +1,9 @@
+<%- includes './partials/head' -%>}
+<% products.forEach((producto)=>{%>
+
+    <ul>
+        <li><%= producto.name %></li>
+        <li><%= producto.price %></li>
+        <li><%= producto.company %></li>
+    </ul>
+<% }) %>
